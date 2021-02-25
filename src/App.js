@@ -38,7 +38,13 @@ export default function App() {
 			</div>
 
 			<div className="buttons">
-				<button onClick={startTimer}>Start</button>
+				<button
+					onClick={() => {
+						if (intervalRef.current == null) startTimer();
+					}}
+				>
+					Start
+				</button>
 				<button onClick={stopTimer}>Stop</button>
 				<button>Reset</button>
 			</div>
