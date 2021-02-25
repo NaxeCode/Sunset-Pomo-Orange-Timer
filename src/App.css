@@ -20,7 +20,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	background: #f37121;
-	color: #2c888d;
+	color: #111d5e;
 }
 
 h2 {
@@ -59,6 +59,39 @@ h2 {
 
 .buttons button:not(:last-child) {
 	margin-right: 5px;
+}
+
+a {
+	color: #111d5e;
+	transition: 0.3s ease all;
+}
+
+a:hover {
+	color: #bac3f8;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	transform: translateY(5px);
+}
+
+p {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: large;
+	line-height: 10px;
+	margin-left: -10px;
+}
+
+.PFP {
+	outline-style: solid;
+	outline-width: 4px;
+	margin-top: 75px;
+	width: 150px;
+	height: 150px;
+	transition: 0.5s ease all;
+}
+
+.PFP:hover {
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+	transform: translateY(-5px);
 }
 
 @media (max-width: 780px) {

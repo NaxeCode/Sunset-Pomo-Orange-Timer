@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import pfp from './naxepfp.png';
 import './App.css';
 
 function padTime(time) {
@@ -55,6 +56,21 @@ export default function App() {
 				<button onClick={stopTimer}>Stop</button>
 				<button onClick={resetTimer}>Reset</button>
 			</div>
+
+			<footer>
+				<span>
+					<a href="https://www.GitHub.com/NaxeCode">
+						<img className="PFP" src={pfp} alt="Naxe's github profile pic" />
+					</a>
+				</span>
+				<span>
+					<p>Designed and Built by</p>
+					<a href="https://www.GitHub.com/NaxeCode">
+						<p>NaxeCode</p>
+					</a>
+					.
+				</span>
+			</footer>
 		</div>
 	);
 }
