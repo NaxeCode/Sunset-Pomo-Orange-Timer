@@ -9,6 +9,7 @@ export default function App() {
 	const [title, setTitle] = useState('Start a sunset!');
 	const [timeLeft, setTimeLeft] = useState(25 * 60);
 	const intervalRef = useRef(null);
+	const timerActive = useRef(false);
 
 	function startTimer() {
 		intervalRef.current = setInterval(() => {
@@ -18,10 +19,12 @@ export default function App() {
 				return 0;
 			});
 		}, 1000);
+		timerActive.current = true;
 	}
 
 	function stopTimer() {
 		clearInterval(intervalRef.current);
+		timerActive.current = false;
 	}
 
 	const minutes = padTime(Math.floor(timeLeft / 60));
@@ -40,7 +43,7 @@ export default function App() {
 			<div className="buttons">
 				<button
 					onClick={() => {
-						if (intervalRef.current == null) startTimer();
+						if (!timerActive.current) startTimer();
 					}}
 				>
 					Start
